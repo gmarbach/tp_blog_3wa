@@ -1,20 +1,20 @@
 <?php
 	$error='';
-	if (isset($_POST['firstName'], $_POST['surname'], $_POST['mail'],$_POST['login'], $_POST['pass'], $_POST['passConfirm']))
+	if (isset($_POST['nom'], $_POST['prenom'], $_POST['mail'],$_POST['login'], $_POST['pwd'], $_POST['pwd2']))
 	{
-		$firstName = $_POST['firstName'];
-		$surname = $_POST['surname'];
+		$nom = $_POST['nom'];
+		$prenom = $_POST['prenom'];
 		$mail = $_POST['mail'];
 		$login = $_POST['login'];
-		$pass = $_POST['pass'];
-		$passConfirm = $_POST['passConfirm'];
-		if (strlen($firstName) < 3)
+		$pwd = $_POST['pwd'];
+		$pwd2 = $_POST['pwd2'];
+		if (strlen($nom) < 3)
 			$error = 'Prénom trop court (3 à 32 caractères)';
 		else if (strlen($firstName) > 32)
 			$error = 'Prénom trop long (3 à 32 caractères)';
-		if (strlen($surname) < 3)
+		if (strlen($prenom) < 3)
 			$error = 'Nom trop court (3 à 32 caractères)';
-		else if (strlen($surname) > 32)
+		else if (strlen($prenom) > 32)
 			$error = 'Nom trop long (3 à 32 caractères)';
 		if (filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL) == false)
 			$error = 'Email non valide';
@@ -22,27 +22,29 @@
 			$error = "Nom d'utilisateur trop court (3 à 32 caractères)";
 		else if (strlen($login) > 32)
 			$error = "Nom d'utilisateur trop long (3 à 32 caractères)";
-		if (strlen($pass) < 4)
+		if (strlen($pwd) < 4)
 			$error = 'Mot de passe trop court (4 à 32 caractères)';
-		else if (strlen($pass) > 32)
+		else if (strlen($pwd) > 32)
 			$error = 'Mot de passe trop long (4 à 32 caractères)';
-		if ($pass != $passConfirm)
+		if ($pwd != $pwd2)
 			$error = 'Revérifiez le mot de passe';
 		if (empty($error))
 		{
-			$user = array($firstName, $surname, $mail, $login, $pass);
-			$userlist = fopen('users.json', 'a');
-			if ($userlist !== false)
-			{
-				$res1 = fwrite($userlist, json_encode($user, JSON_UNESCAPED_UNICODE));
-				$res2 = fclose($userlist);
-				if ($res1 !== false && $res2 !== false)
-				{
-					header('Location: index.php?page=login');
-					exit;
-				}
-			}
-			$error ='Erreur interne';
+
+
+
+$bdd = new PDO('mysql:host=localhost;dbname=blog','root','troiswa');git 
+
+$insert = $bdd -> prepare('INSERT INTO register (nom,prenom,mail,login,pwd,pwd2) VALUES (?,?,?,?,?,?)');
+
+$insert -> execute(array($_POST['nom'],$_POST['prenom'],$_POST['mail'],$_POST['login'],$_POST['pwd'],$_POST['pwd2']));
+
+
+
+header('Location:index.php?page=login');
+
+
+
 		}
 	}
 ?>
