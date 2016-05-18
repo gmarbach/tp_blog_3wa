@@ -7,7 +7,7 @@ if (isset($_SESSION['login']))
 	}
 	 	
 	else
-		require('views/header_log.phtml');
+		require('views/headegitr_log.phtml');
 }
 else
 {
