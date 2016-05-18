@@ -1,0 +1,88 @@
+body{
+	background: url('../images/poisson-rouge1.jpg') no-repeat top center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.container{
+	width: 1000px;
+	margin: 0 auto;
+}
+.container, img{
+	margin-bottom: 20px;
+}
+img{
+	max-width: 100%;
+}
+h1{
+	/*border-bottom: 1px solid #eee;*/
+	margin: 30px 0 0px;
+	padding-bottom: 20px;
+}
+a.list-group-item-active, a.list-group-item:hover{
+	background: #3175b1;
+	color: #fff;
+}
+a.list-group-item-active .list-group-item-heading, a.list-group-item:hover .list-group-item-heading{
+	color: #fff;
+}
+.messageAccueil{
+	text-align: center;
+}
+.form-control{
+	border: 0;
+}
+.submit{
+	margin-top: 10px;
+}
+.task{
+	border: 1px solid #666;
+	border-radius: 5px;
+}
+.deadline{
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #f30;
+}
+.btn a{
+	display: inline-block !important;
+	padding: 20px !important;
+	color: #fff !important;
+}
+.haute{
+	background: #f00;
+	color: #fff;
+	display: inline-block;
+	padding: 20px;
+	border-radius: 5px;
+}
+.moyenne{
+	background: #0f0;
+	color: #000;
+	display: inline-block;
+	padding: 20px;
+	border-radius: 5px;
+}
+.basse{
+	background: #006;
+	color: #fff;
+	display: inline-block;
+	padding: 20px;
+	border-radius: 5px;
+}
+footer{
+	text-align: center;
+}
+footer ul{
+	padding: 0;
+}
+footer li{
+	display: inline-block;
+}
+footer li a{
+	padding: 20px;
+	color: #222;
+}
+footer li a:hover{
+	color: #222;
+}

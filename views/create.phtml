@@ -1,0 +1,30 @@
+<h2>Création de tâche</h2>
+
+<div class="error <?=$hide?>">Erreur : <?php echo $error ?></div>
+
+<form action="" method="POST" class="task">
+	<div class="task-item">
+		<label for="title">Titre de la tâche</label>
+		<input type="text" name="title" id="title">
+	</div>
+	<div class="task-item">
+		<label for="descript">Description de la tâche</label>
+		<textarea type="text" name="descript" id="descript"></textarea>
+	</div>
+	<div class="task-item">
+		<label for="priority">Priorité</label>
+		<select name="priority" id="priority">
+			<option value="0" selected>Sélectionnez la priorité</option>
+			<option value="haute">Haute</option>
+			<option value="moyenne">Moyenne</option>
+			<option value="basse">Basse</option>			
+		</select>		
+	</div>
+	<div>
+		<label for="dateFin">Date</label>
+		<input type="date" name="dateFin" id="dateFin" placeholder="jj/mm/aaaa"/>
+	</div>
+
+	<button type="submit">Créer</button>
+
+</form>

@@ -1,0 +1,21 @@
+<h2>Tâches en cours</h2>
+<form action="" method="GET" class="list">
+	<select name="sortType" id="sortType">
+		<option value="createDate" selected>Date de création</option>
+		<option value="dueDate">Date de réalisation</option>
+		<option value="priority">Priorité</option>
+	</select>
+	<select name="orderType" id="orderType">
+		<option value="asc" selected>Croissante</option>
+		<option value="desc">Décroissante</option>
+	</select>
+	<button type="submit">Trier</button>
+</form>
+<div>
+	<p>Tâches classées par <?=$sort1?> et par ordre <?=$sort2?></p>
+</div>
+<div class="task-container">
+	<?php require('apps/taches.php'); ?>
+	<div class="error"><?=$error?></div>
+	<div class="notask"><?=$noTask?></div>
+</div>

@@ -1,0 +1,35 @@
+<div class="container task">
+	<div class="row">
+		<div class="col-sm-8">
+			<h3><?=$taskTitle?></h3>
+		</div>
+		<div class="col-sm-4">
+			<div class="priority <?=$taskPrio?>">Priorité <?=$taskPrio?></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12 task-body">
+			<p><?=$taskDescr?></p>
+			<p>Créée le <?=$taskDateCreate?></p>
+			<p class="deadline">A faire avant le <?=$taskDateDue?></p>
+		</div>
+
+	</div>
+	<div class="row <?=$modify?>">
+		<div class="col-sm-2 modify">
+			<a class=" btn btn-primary" href="index.php?page=edit&time=<?=$timestamp?>&day=<?=$taskTime['day']?>&month=<?=$taskTime['month']?>&year=<?=$taskTime['year']?>">Modifier</a>
+		</div>
+		<div class="col-sm-2 modify">
+			<a class=" btn btn-primary" href="index.php?page=duplique&time=<?=$timestamp?>&day=<?=$taskTime['day']?>&month=<?=$taskTime['month']?>&year=<?=$taskTime['year']?>">Dupliquer</a>
+		</div>
+		<div class="col-sm-2 modify">
+			<a class=" btn btn-primary" href="index.php?page=suppr&time=<?=$timestamp?>&day=<?=$taskTime['day']?>&month=<?=$taskTime['month']?>&year=<?=$taskTime['year']?>">Supprimer</a>
+		</div>
+		<div class="col-sm-2 modify">
+			<a class=" btn btn-primary" href="index.php?page=comment&time=<?=$timestamp?>&day=<?=$taskTime['day']?>&month=<?=$taskTime['month']?>&year=<?=$taskTime['year']?>">Commentaire</a>
+		</div>
+
+	
+
+	</div>
+</div>

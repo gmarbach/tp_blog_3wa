@@ -1,0 +1,29 @@
+<h2>Inscription</h2>
+<div class="error"><?=$error?></div>
+<form action="" method="POST" class="register">
+	<div class="register-item">
+		<label for="firstName">Prénom</label>
+		<input type="text" name="firstName" id="firstName">
+	</div>
+	<div class="register-item">
+		<label for="surname">Nom</label>
+		<input type="text" name="surname" id="surname">
+	</div>
+	<div class="register-item">
+		<label for="mail">Email</label>
+		<input type="email" name="mail" id="mail">
+	</div>
+	<div class="register-item">
+		<label for="login">Nom d'utilisateur</label>
+		<input type="text" name="login" id="login">
+	</div>
+	<div class="register-item">
+		<label for="pass">Mot de passe</label>
+		<input type="password" name="pass" id="pass">
+	</div>
+	<div class="register-item">
+		<label for="passConfirm">Confirmez le mot de passe</label>
+		<input type="password" name="passConfirm" id="passConfirm">
+	</div>
+	<button type="submit">S'inscrire</button>
+</form>
