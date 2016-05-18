@@ -33,7 +33,7 @@
 
 
 
-$bdd = new PDO('mysql:host=localhost;dbname=blog','root','troiswa');
+$bdd = new PDO('mysql:host=localhost;dbname=blog-3wa','root','troiswa');
 
 $insert = $bdd -> prepare('INSERT INTO register (nom,prenom,mail,login,pwd,pwd2) VALUES (?,?,?,?,?,?)');
 
