@@ -1,22 +1,19 @@
 <?php
 	$time=$_GET['time'];
-	if (($tasklist = file_get_contents('tasks.json')) !== false)
+	if (($artList = new PDO ('mysql: host=localhost; dbname=articles; charset=utf8', "root", "troiswa"))!== false)
 	{
-		$tasks = json_decode($tasklist, true);
-		$i = 0;
-		while ($i < count($tasks))
+		$compteur = 0;
+		while ($compteur < count($artList))
 		{
-			if ($time == $tasks[$i]['timestamp'])
-				$task = $tasks[$i];
-			$i++;
+			if ($time == $artList[$compteur]['timestamp'])
+				$article = $artList[$compteur];
+			$compteur++;
 		}
-		$taskTitle = $task['title'];
-		$taskDescr = $task['description'];
-		$taskPrio = $task['priority'];
-		$taskDateCreate = $task['date'];
-		$taskTime = date_parse_from_format('j/m/Y', $taskDateCreate);
-		$taskDateDue = $task['due date'];
-		$comment = $task['comment'];
+		$artTitle = $artList['titre'];
+		$artContent = $artList['contenu'];
+		$artAuthor = $artList['autheur'];
+		$artCreaDate = $artList['date'];
+		$artId = $artList['id'];
 	}
 	else
 		$error = 'erreur interne';
