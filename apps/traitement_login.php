@@ -4,7 +4,7 @@
 	{
 
 
-$bdd = new PDO('mysql:host=localhost;dbname=blog','root','troiswa');
+$bdd = new PDO('mysql:host=localhost;dbname=blog-3wa','root','troiswa');
 
 $req = $bdd -> query('SELECT login,pwd FROM register');
 
