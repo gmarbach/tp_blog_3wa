@@ -1,13 +1,14 @@
 <h2>Inscription</h2>
 <div class="error"><?=$error?></div>
 <form action="" method="POST" class="register">
+
 	<div class="register-item">
 		<label for="firstName">Prénom</label>
-		<input type="text" name="firstName" id="firstName">
+		<input type="text" name="prenom" id="firstName">
 	</div>
 	<div class="register-item">
 		<label for="surname">Nom</label>
-		<input type="text" name="surname" id="surname">
+		<input type="text" name="nom" id="surname">
 	</div>
 	<div class="register-item">
 		<label for="mail">Email</label>
@@ -19,11 +20,12 @@
 	</div>
 	<div class="register-item">
 		<label for="pass">Mot de passe</label>
-		<input type="password" name="pass" id="pass">
+		<input type="password" name="pwd" id="pass">
 	</div>
 	<div class="register-item">
 		<label for="passConfirm">Confirmez le mot de passe</label>
-		<input type="password" name="passConfirm" id="passConfirm">
+		<input type="password" name="pwd2" id="passConfirm">
 	</div>
 	<button type="submit">S'inscrire</button>
+
 </form>
