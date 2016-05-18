@@ -15,7 +15,7 @@ while ($donnees = $req ->fetch())
     {
      echo 'azerty' ;
 
-     header('Location:index.php?page=register');
+     header('Location:index.php?page=home');
 
     }
 }
