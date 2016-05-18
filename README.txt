@@ -44,3 +44,4 @@ Récupérer la structure mvc d'un membre et la push (ça sera la base du projet)
 - 
 */
 ?>
+notre schéma: https://docs.google.com/drawings/d/150QzRG7gZVAdmknNAxGdLPCMbEj3N6h0cJiQMVvb0fQ/edit?usp=sharing
