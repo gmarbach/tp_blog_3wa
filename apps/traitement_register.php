@@ -9,8 +9,8 @@
 		$pwd = $_POST['pwd'];
 		$pwd2 = $_POST['pwd2'];
 		if (strlen($nom) < 3)
-			$error = 'Prénom trop court (3 à 32 caractères)';
-		else if (strlen($firstName) > 32)
+			$error = 'Nom trop court (3 à 32 caractères)';
+		else if (strlen($prenom) > 32)
 			$error = 'Prénom trop long (3 à 32 caractères)';
 		if (strlen($prenom) < 3)
 			$error = 'Nom trop court (3 à 32 caractères)';
