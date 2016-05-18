@@ -1,7 +1,13 @@
 <?php
 if (isset($_SESSION['login']))
 {
-	require('views/header_log.phtml');
+	if ($_SESSION['login'] == 'admin')
+	{
+		require('views/header_admin.phtml');
+	}
+	 	
+	else
+		require('views/header_log.phtml');
 }
 else
 {
