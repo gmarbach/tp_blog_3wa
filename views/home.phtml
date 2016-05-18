@@ -1,15 +1,15 @@
 <h2>Tâches en cours</h2>
 <form action="" method="GET" class="list">
-	<select name="sortType" id="sortType">
-		<option value="createDate" selected>Date de création</option>
-		<option value="dueDate">Date de réalisation</option>
-		<option value="priority">Priorité</option>
+	<select name="sortType" id="sortType" onchange="this.form.submit();">
+		<option value="createDate" <?=$selectSortType[$sortTypeTest][0]?>>Date de création</option>
+		<option value="dueDate" <?=$selectSortType[$sortTypeTest][1]?>>Date de réalisation</option>
+		<option value="priority" <?=$selectSortType[$sortTypeTest][2]?>>Priorité</option>
 	</select>
-	<select name="orderType" id="orderType">
-		<option value="asc" selected>Croissante</option>
-		<option value="desc">Décroissante</option>
+	<select name="orderType" id="orderType" onchange="this.form.submit();">
+		<option value="asc" <?=$selectOrderType[$sortOrder][0]?>>Croissante</option>
+		<option value="desc" <?=$selectOrderType[$sortOrder][1]?>>Décroissante</option>
 	</select>
-	<button type="submit">Trier</button>
+	<!-- <button type="submit">Trier</button> -->
 </form>
 <div>
 	<p>Tâches classées par <?=$sort1?> et par ordre <?=$sort2?></p>
