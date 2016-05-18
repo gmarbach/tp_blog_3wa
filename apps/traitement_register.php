@@ -35,9 +35,9 @@
 
 $bdd = new PDO('mysql:host=localhost;dbname=blog-3wa','root','troiswa');
 
-$insert = $bdd -> prepare('INSERT INTO register (nom,prenom,mail,login,pwd,pwd2) VALUES (?,?,?,?,?,?)');
+$insert = $bdd -> prepare('INSERT INTO register (nom,prenom,mail,login,pwd) VALUES (?,?,?,?,?)');
 
-$insert -> execute(array($_POST['nom'],$_POST['prenom'],$_POST['mail'],$_POST['login'],$_POST['pwd'],$_POST['pwd2']));
+$insert -> execute(array($_POST['nom'],$_POST['prenom'],$_POST['mail'],$_POST['login'],$_POST['pwd']));
 
 
 
