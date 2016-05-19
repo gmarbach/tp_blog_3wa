@@ -32,8 +32,8 @@
 		{
 
 
-      $insert = ( "INSERT INTO register (nom,prenom,login,pwd,mail)
-     VALUES ('".$nom.",".$prenom.",".$mail.",".$login.",".$pwd."')");
+      $insert =  "INSERT INTO register (nom,prenom,login,pwd,mail)
+     VALUES ('".$nom.",".$prenom.",".$mail.",".$login.",".$pwd."')";
     
     $res = mysqli_query($link,$insert);
 
