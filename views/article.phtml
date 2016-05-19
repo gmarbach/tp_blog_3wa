@@ -1,25 +1,22 @@
+
+<!--Affichage de l'article-->
 <div class="container">
 	<div class="row">
-		<div class="col-sm-8">
-			<h3><?=$taskTitle?></h3>
+		<div class="panel panel-info">
+			<div class="panel-heading">
+			<h3 class="panel-title"><?=$artTitle?>créé le <?=$artCreaDate?> par <?=$artAuthor?></h3>
+			</div>
+			<div class="panel-body">
+			    <?=$artContent?>
+			</div>
 		</div>
-		<div class="col-sm-4">
-			<div class="priority <?=$taskPrio?>">Priorité <?=$taskPrio?></div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-12 task-body">
-			<p><?=$taskDescr?></p>
-			<p>Créée le <?=$taskDateCreate?></p>
-			<p class="deadline">A faire avant le <?=$taskDateDue?></p>
-		</div>
-
 	</div>
 </div>
+<!-- Affichage des commentaires liés à l'article -->
 <div class="container">
 	<h3>Commentaires</h3>
-	<?php require('apps/comments.php'); ?>
-	<div class="container <?=$hide?>">
+	<?php require('apps/artComment.php'); ?>
+	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 comment-body">
 				<p><?=$noComment?></p>
@@ -27,11 +24,7 @@
 		</div>
 	</div>
 </div>
-<div class="error"><?=$error?></div>
-<form action="" method="POST" class="comment">
-	<div class="comment-item">
-		<label for="comment">Ajouter un commentaire</label>
-		<textarea type="text" name="comment" id="comment"></textarea>
-	</div>
-	<button type="submit">Envoyer</button>
-</form>
+
+<div class="boutonComment">
+<a href="?page=artComment.php">Commenter</a>
+</div>
