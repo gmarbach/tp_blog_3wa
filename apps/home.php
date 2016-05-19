@@ -1,32 +1,28 @@
 <?php
 	$error = '';
-	// $noTask = '';
 
-
-
-	// 	$sortTypeTest = 'createDate';
-	// 	$sortOrder = 'asc';
-
-	// if (isset($_GET['sortType'], $_GET['orderType'])){
-	// 	$sortTypeTest = $_GET['sortType'];
-	// 	$sortOrder = $_GET['orderType'];
-	// }
-
+	$query = "SELECT * FROM articles";
+	$res = mysqli_query($link, $query);
 	$count = 0;
-	while($count <10){
-		$artTitle = 'Ici le titre';
-		$artContent = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta animi neque consectetur explicabo. Nihil quas facere, tempore recusandae repellendus, ipsa, accusamus exercitationem fugiat quisquam nostrum error magni non sint quasi.';
+	while($ligne = mysqli_fetch_assoc($res)){
+		$artTitle = $ligne['titre'];
+		$artContent = $ligne['contenu'];
 		$mots = explode(" ", $artContent);
+		$nbMots = count($mots);
+
+		if($nbMots > 15){
+			$nbmots = 15;
+		}
 		$countMots = 0;
 		$artContent = "";
-		while($countMots < 15){
+		while($countMots < $nbMots){
 			$artContent .= $mots[$countMots]." ";
 			$countMots++;
 		}
 
-		$artCreaDate = '18/05/2016';
-		$artAuthor = 'Edouard Dabert';
-		$artId = '1';
+		$artCreaDate = $ligne['date_creation'];
+		$artAuthor = $ligne['autheur'];
+		$artId = $ligne['id'];
 
 		require('views/home.phtml');
 		$count++;
