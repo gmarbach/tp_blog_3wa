@@ -7,10 +7,10 @@ $error = '';
 
 $page = 'home';
 
-$access = array('home', 'register', 'login','article');
+$access = array('home', 'register', 'login');
 
 if (isset($_SESSION['login']))
-	$access = array('home', 'register', 'login', 'adminCrea', 'adminModif', 'adminSuppr', 'editUser');
+	$access = array('home', 'register', 'login', 'adminCrea', 'adminModif', 'adminSuppr', 'editUser', 'logout', 'article');
 if (isset($_GET['page']))// http://fr2.php.net/manual/fr/function.isset.php
 {
 	if (in_array($_GET['page'], $access))
