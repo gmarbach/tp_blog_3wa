@@ -20,7 +20,7 @@
 		$countMots = 0;
 		$artContent = "";
 		while($countMots < 15){
-			$artContent .= $mots[$countMots];
+			$artContent .= $mots[$countMots]." ";
 			$countMots++;
 		}
 
