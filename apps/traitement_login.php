@@ -4,7 +4,7 @@
 	{
 
 
-    $comparer = "SELECT login,password FROM user";
+    $comparer = "SELECT login,password FROM register";
 
     $res = mysqli_query($link,$comparer);
 
