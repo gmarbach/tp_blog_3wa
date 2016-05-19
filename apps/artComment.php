@@ -9,11 +9,17 @@ $res=mysqli_query($link,$query);
 			$comContent = $ligne['contenu'];
 			$comAuthor = $ligne['auteur'];
 			$comCreaDate = $ligne['date_de_creation'];
-			$comModifDate= $ligne['date_de_modif']
+			$comModifDate= $ligne['date_de_modif'];
 			$comId = $ligne['id'];
 
-			require('views/artComment.phtml');
+			if (isset($_SESSION['login']))
+			{
+				require('views/artCommentCrea.phtml')
+			}
+			
+			else
+			{
+				require('views/artComment.phtml');
+			}
 		}
-
-	
 ?>
