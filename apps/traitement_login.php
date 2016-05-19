@@ -4,7 +4,7 @@
 	{
 
         /** Pascal : Vous devriez aussi récupérer l'id de l'utilisateur, ça vous sera utile sous peu ! **/
-        $comparer = "SELECT login,pwd FROM register";/** Pascal : Dans votre base de données vous n'avez pas respecté la taille des champs : 2^n-1 **/
+        $comparer = "SELECT login,pwd, profil FROM register";/** Pascal : Dans votre base de données vous n'avez pas respecté la taille des champs : 2^n-1 **/
         $res = mysqli_query($link,$comparer);
 
         while($lignes = mysqli_fetch_assoc($res))
@@ -12,6 +12,11 @@
         	if($lignes['login'] == $_POST['login'] && $lignes['pwd'] == $_POST['pwd'] )
         	{
                 $_SESSION['login'] = $lignes['login'];
+
+                $_SESSION['profil'] = $lignes['profil'];
+
+                var_dump($lignes['profil']);
+
         		header('Location:index.php?page=home');
                 exit;
         	}

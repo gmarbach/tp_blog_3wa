@@ -1,7 +1,8 @@
 <?php
 if (isset($_SESSION['login']))
 {
-	if ($_SESSION['login'] == 'admin')
+	var_dump($_SESSION['profil']);
+	if ($_SESSION['profil'] == 'admin')
 	{
 		require('views/header_admin.phtml');
 	}
