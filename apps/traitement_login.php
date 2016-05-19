@@ -4,28 +4,29 @@
 	{
 
 
-$bdd = new PDO('mysql:host=localhost;dbname=blog-3wa','root','troiswa');
+    $comparer = "SELECT login,password FROM user";
 
-$req = $bdd -> query('SELECT login,pwd FROM register');
+    $res = mysqli_query($link,$comparer);
 
-while ($donnees = $req ->fetch())
-{
-    if ($_POST['login'] == $donnees['login'] AND 
-    	$_POST['pwd'] == $donnees['pwd'])
+    while($lignes = mysqli_fetch_assoc($res))
     {
-     echo 'azerty' ;
 
-     header('Location:index.php?page=home');
 
+    	if($lignes['login'] = $_POST['login'] && 
+    		$lignes['password'] = $_POST['password'] )
+
+    	{
+
+    		header('Location:index.php?page=home');
+    	}
     }
+
+
+
+
+
+
+
+  
 }
-
-		
-
-
-
-			
-		
-		
-	}
 ?>
