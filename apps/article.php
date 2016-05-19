@@ -1,21 +1,18 @@
 <?php
-	$time=$_GET['time'];
-	if (($artList = new PDO ('mysql: host=localhost; dbname=articles; charset=utf8', "root", "troiswa"))!== false)
+	if ($query= "SELECT * FROM articles WHERE id=1"!== false)
 	{
-		$compteur = 0;
-		while ($compteur < count($artList))
+		$res= mysqli_query($link,$query);
+		while ($ligne=mysqli_fetch_assoc($res))
 		{
-			if ($time == $artList[$compteur]['timestamp'])
-				$article = $artList[$compteur];
-			$compteur++;
+		
+		$artTitle = $ligne['titre'];
+		$artContent = $ligne['contenu'];
+		$artAuthor = $ligne['autheur'];
+		$artCreaDate = $ligne['date'];
+		$artId = $ligne['id'];
 		}
-		$artTitle = $artList['titre'];
-		$artContent = $artList['contenu'];
-		$artAuthor = $artList['autheur'];
-		$artCreaDate = $artList['date'];
-		$artId = $artList['id'];
 	}
 	else
 		$error = 'erreur interne';
-	require('views/comment.phtml');
+	require('views/home.phtml');
 ?>
