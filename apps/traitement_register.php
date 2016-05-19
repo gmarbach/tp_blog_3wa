@@ -32,12 +32,11 @@
 		{
 
 
-
-$bdd = new PDO('mysql:host=localhost;dbname=blog-3wa','root','troiswa');
-
-$insert = $bdd -> prepare('INSERT INTO register (nom,prenom,mail,login,pwd) VALUES (?,?,?,?,?)');
-
-$insert -> execute(array($_POST['nom'],$_POST['prenom'],$_POST['mail'],$_POST['login'],$_POST['pwd']));
+    $insert = "INSERT INTO user ('nom,prenom,login,pwd,mail')
+     VALUES ("$nom","$prenom","$mail","$login","$password")";
+    
+    $res = mysqli_query($link,$insert);
+        
 
 
 
