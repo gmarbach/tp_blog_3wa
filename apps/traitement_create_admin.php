@@ -21,8 +21,12 @@
 		
 		if (empty($error))
 		{
-			$insert = "INSERT INTO articles (titre, contenu, autheur, date_creation) VALUES ("$title", "$content", "$author", "$dateCreation")";
-			$res = mysqli_query($link,$insert);
+
+			$insert = "INSERT INTO articles (titre, contenu, autheur, date_creation) VALUES ('".$title."', '".$content."', '".$author."', '".$dateCreation."')";
+			$res = mysqli_query($link, $insert);
+
+			header('Location: index.php?page=index');
+
 		}
 		
 	}
