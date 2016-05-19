@@ -10,7 +10,7 @@ $page = 'home';
 $access = array('home', 'register', 'login');
 
 if (isset($_SESSION['login']))
-	$access = array('home', 'register', 'login', 'adminCrea', 'adminModif', 'adminSuppr', 'editUser', 'logout', 'article');
+	$access = array('home', 'register', 'login', 'create_admin', 'adminModif', 'adminSuppr', 'editUser', 'logout', 'article');
 if (isset($_GET['page']))// http://fr2.php.net/manual/fr/function.isset.php
 {
 	if (in_array($_GET['page'], $access))
