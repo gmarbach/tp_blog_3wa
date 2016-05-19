@@ -32,16 +32,20 @@
 		{
 
 
-    $insert = "INSERT INTO user ('nom,prenom,login,pwd,mail')
-     VALUES ("$nom","$prenom","$mail","$login","$password")";
+      $insert =  "INSERT INTO register 
+                 (nom,prenom,login,pwd,mail)
+                 VALUES ('".$nom."','".$prenom."',
+     	         '".$login."','".$pwd."','".$mail."')";
     
     $res = mysqli_query($link,$insert);
-        
+
+  
+       
 
 
 
 header('Location:index.php?page=login');
-
+exit;
 
 
 		}

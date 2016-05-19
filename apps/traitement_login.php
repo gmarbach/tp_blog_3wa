@@ -4,7 +4,7 @@
 	{
 
 
-    $comparer = "SELECT login,password FROM user";
+    $comparer = "SELECT login,pwd FROM register";
 
     $res = mysqli_query($link,$comparer);
 
@@ -13,7 +13,7 @@
 
 
     	if($lignes['login'] = $_POST['login'] && 
-    		$lignes['password'] = $_POST['password'] )
+    		$lignes['pwd'] = $_POST['pwd'] )
 
     	{
 
