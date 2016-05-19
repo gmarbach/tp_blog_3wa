@@ -1,6 +1,8 @@
 <?php
 
 session_start();
+require('apps/config.php');
+
 $error = '';
 
 $page = 'home';
