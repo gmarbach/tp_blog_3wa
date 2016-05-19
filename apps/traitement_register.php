@@ -32,8 +32,8 @@
 		{
 
 
-    $insert = "INSERT INTO user ('nom,prenom,login,pwd,mail')
-     VALUES ("$nom","$prenom","$mail","$login","$password")";
+    $insert = "INSERT INTO user (nom,prenom,login,pwd,mail)
+     VALUES ($nom,$prenom,$mail,$login,$password)";
     
     $res = mysqli_query($link,$insert);
         
