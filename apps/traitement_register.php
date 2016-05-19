@@ -32,18 +32,18 @@
 		{
 
 
-   mysqli_query( "INSERT INTO register (nom,prenom,login,pwd,mail)
-     VALUES ($nom,$prenom,$mail,$login,$password)");
+   if($conect = $link -> query( "INSERT INTO register (nom,prenom,login,pwd,mail)
+     VALUES ('".$nom.",".$prenom.",".$mail.",".$login.",".$password."')"))
     
   
-        
+     {   
 
 
 
 header('Location:index.php?page=login');
 
 
-
+}
 		}
 	}
 ?>
