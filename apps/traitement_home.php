@@ -1,4 +1,5 @@
 <?php
+/** Pascal : Il n'y a aucun traitement de fait dans ce fichier, ce n'est donc pas dans ce fichier que vous devez mettre ce code **/
 	$sortType = 'date';
 	$sortOrder = 'asc';
 	$sortPrio = false;
