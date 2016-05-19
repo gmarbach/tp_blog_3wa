@@ -33,7 +33,7 @@
 
 
    if($conect = $link -> query( "INSERT INTO register (nom,prenom,login,pwd,mail)
-     VALUES ('".$nom.",".$prenom.",".$mail.",".$login.",".$password."')"))
+     VALUES ('".$nom.",".$prenom.",".$mail.",".$login.",".$pwd."')"))
     
   
      {   
