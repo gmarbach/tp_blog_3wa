@@ -7,7 +7,7 @@ $error = '';
 
 $page = 'home';
 
-$access = array('home', 'register', 'login');
+$access = array('home', 'register', 'login','article');
 
 if (isset($_SESSION['login']))
 	$access = array('home', 'register', 'login', 'adminCrea', 'adminModif', 'adminSuppr', 'editUser');
