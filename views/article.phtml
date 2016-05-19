@@ -13,18 +13,6 @@
 	</div>
 </div>
 <!-- Affichage des commentaires liés à l'article -->
-<div class="container">
-	<h3>Commentaires</h3>
-	<?php require('apps/artComment.php'); ?>
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12 comment-body">
-				<p><?=$noComment?></p>
-			</div>
-		</div>
-	</div>
-</div>
+<?php require ("apps/artComment.php"); ?>
+	
 
-<div class="boutonComment">
-<a href="?page=artComment.php">Commenter</a>
-</div>
