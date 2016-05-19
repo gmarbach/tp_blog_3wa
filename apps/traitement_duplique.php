@@ -1,4 +1,5 @@
 <?php
+/** Pascal : Faites le ménage rapidement pour pas avoir des fichiers en trop que vous garderez pour rien ;) **/
 	$error = '';
 	$time=$_GET['time'];
 	if (($tasklist = file_get_contents('tasks.json')) !== false)

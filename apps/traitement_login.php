@@ -3,7 +3,8 @@
 	if (isset($_POST['login'], $_POST['pwd']))
 	{
 
-        $comparer = "SELECT login,pwd FROM register";
+        /** Pascal : Vous devriez aussi récupérer l'id de l'utilisateur, ça vous sera utile sous peu ! **/
+        $comparer = "SELECT login,pwd FROM register";/** Pascal : Dans votre base de données vous n'avez pas respecté la taille des champs : 2^n-1 **/
         $res = mysqli_query($link,$comparer);
 
         while($lignes = mysqli_fetch_assoc($res))
