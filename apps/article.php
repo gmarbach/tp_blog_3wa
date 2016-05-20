@@ -1,7 +1,9 @@
 <?php
+
 if (isset($_GET['artId'])){
 
 	$artId=$_GET['artId'];
+
 	$query="SELECT * FROM articles WHERE id=".$artId;
 	// var_dump($query);
 	$res= mysqli_query($link,$query) or die("erreur connection");
@@ -17,6 +19,7 @@ if (isset($_GET['artId'])){
 	// var_dump($artId);
 
 }	
+
 else{
 	$error = "erreur interne";
 }

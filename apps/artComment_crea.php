@@ -1,4 +1,5 @@
 <?php
+$artId=$_GET['artId'];
 $query="SELECT * FROM comments WHERE id=".$artId;
 //$joint="SELECT articles.id, comments.id AS commentaire_id FROM articles INNER JOIN comments ON article.id=comments.id ORDER BY article.id;"
 $res=mysqli_query($link,$query);
@@ -14,7 +15,7 @@ $res=mysqli_query($link,$query);
 
 			if (isset($_SESSION['login']))
 			{
-				require('views/artComment_Crea.phtml');
+				require('views/artComment_crea.phtml');
 			}
 			
 			else
@@ -22,3 +23,4 @@ $res=mysqli_query($link,$query);
 				require('views/artComment.phtml');
 			}
 		}
+?>
