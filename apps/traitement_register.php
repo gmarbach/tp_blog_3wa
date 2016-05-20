@@ -1,13 +1,15 @@
 <?php
 	$error='';
-	if (isset($_POST['nom'], $_POST['prenom'], $_POST['mail'],$_POST['login'], $_POST['pwd'], $_POST['pwd2']))
+	if (isset($_POST['nom'], $_POST['prenom'], $_POST['mail'],$_POST['login'],
+	 $_POST['pwd'], $_POST['pwd2']))
 	{
 		$nom = $_POST['nom'];
 		$prenom = $_POST['prenom'];
 		$mail = $_POST['mail'];
 		$login = $_POST['login'];
 		$pwd = $_POST['pwd'];
-		$pwd2 = $_POST['pwd2'];
+        $pwd2 = $_POST['pwd2'];
+	
 		if (strlen($nom) < 3)
 			$error = 'Nom trop court (3 à 32 caractères)';
 		else if (strlen($prenom) > 32)/** Pascal : Petite coquille, ici vous devriez vérifier la variable $nom et pas $prenom, le copier coller, attention :p **/

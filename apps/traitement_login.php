@@ -15,13 +15,12 @@ if(isset($_GET['action']))
 
  
 
-    /*mysqli_query($link,'DELETE * FROM articles');*/
 
 
 
     
 
-    header('Location:index.php?page=home');
+    header('Location:index.php?page=home_admin');
 
  
 }
@@ -44,7 +43,7 @@ if(isset($_GET['action']))
 
     
 
-    header('Location:index.php?page=home');
+    header('Location:index.php?page=home_admin');
 
  
 }
@@ -52,6 +51,32 @@ if(isset($_GET['action']))
     
         
     
+}
+
+
+if(isset($_GET['action']))
+{
+
+    if($_GET['action'] == "commenter")
+    
+{
+
+    
+
+
+
+ 
+
+
+
+
+    
+
+    header('Location:index.php?page=home_user');
+
+ 
+}
+
 }
 
 
@@ -79,8 +104,8 @@ if(isset($_GET['action']))
                 $_SESSION['profil'] = $lignes['profil'];
 
                 $_SESSION['id'] = $lignes['id'];
-
-        		header('Location:index.php?page=home');
+                 
+        		header('Location:index.php?page=home_user');
                 exit;
         	}
         }
