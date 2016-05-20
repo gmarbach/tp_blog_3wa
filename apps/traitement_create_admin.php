@@ -5,7 +5,7 @@
 	{
 		$title = $_POST['title'];
 		$content = $_POST['content'];
-		$dateCreation = date('j/m/Y');
+		
 		$time = time();/** Pascal : La variable $time n'est pas utilisée **/
 		$author = $_SESSION['login'];/** Pascal : /!\ ATTENTION /!\ Vous utilisez la variable $_SESSION['login'] sans avoir vérifier sa présence ! **/
 
@@ -22,7 +22,7 @@
 		if (empty($error))
 		{
 
-			$insert = "INSERT INTO articles (titre, contenu, autheur, date_creation) VALUES ('".$title."', '".$content."', '".$author."', '".$dateCreation."')";
+			$insert = "INSERT INTO articles (titre, contenu, autheur) VALUES ('".$title."', '".$content."', '".$author."')";
 			$res = mysqli_query($link, $insert);
 
 			header('Location: index.php?page=index');
