@@ -64,13 +64,11 @@ if(isset($_GET['action']))
 	{
 
         /** Pascal : Vous devriez aussi récupérer l'id de l'utilisateur, ça vous sera utile sous peu ! **/
-<<<<<<< HEAD
        $comparer = "SELECT login, pwd, profil FROM register";/** Pascal : Dans votre base de données vous n'avez pas respecté la taille des champs : 2^n-1 **/
        $res = mysqli_query($link,$comparer);
-=======
-        $comparer = "SELECT id, login, pwd, profil FROM register";/** Pascal : Dans votre base de données vous n'avez pas respecté la taille des champs : 2^n-1 **/
+       $comparer = "SELECT id, login, pwd, profil FROM register";/** Pascal : Dans votre base de données vous n'avez pas respecté la taille des champs : 2^n-1 **/
         $res = mysqli_query($link,$comparer);
->>>>>>> da139856d7324e2ac0ad22b5608da53edb975b65
+
 
         while($lignes = mysqli_fetch_assoc($res))
         {
