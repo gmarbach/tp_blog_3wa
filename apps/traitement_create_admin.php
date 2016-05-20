@@ -5,6 +5,7 @@
 	{
 		$title = $_POST['title'];
 		$content = $_POST['content'];
+		$author = $_SESSION['login'];
 		$id_author = $_SESSION['id'];/** Pascal : /!\ ATTENTION /!\ Vous utilisez la variable $_SESSION['login'] sans avoir vérifier sa présence ! **/
 
 		
@@ -21,7 +22,7 @@
 		{
 
 
-			$insert = "INSERT INTO articles (titre, contenu, id_author) VALUES ('".$title."', '".$content."', '".$id_author."')";
+			$insert = "INSERT INTO articles (titre, contenu, autheur, id_author) VALUES ('".$title."', '".$content."', '".$author."', '".$id_author."')";
 			$res = mysqli_query($link, $insert);
 			
 
