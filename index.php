@@ -13,7 +13,7 @@ $access = array('home', 'register', 'login');
 if (isset($_SESSION['login'])){
 	$access = array('home', 'register', 'login', 'create_admin',
 					'adminModif', 'adminSuppr', 'editUser', 'logout', 'article' ,
-					'artComment_Crea' , 'artComment_suppr');
+					'artComment_crea' , 'artComment_suppr');
 }
 else{
 	$access = array('home', 'register', 'login', 'logout', 'article');
