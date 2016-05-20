@@ -1,6 +1,4 @@
-
-Affichage de l'article-->
-<div class="container">azerty
+<div class="container">
 	<div class="row">
 		<div class="panel panel-info">
 			<div class="panel-heading">
@@ -16,13 +14,19 @@ Affichage de l'article-->
 			</div>
 		</div>
 
-		<?=require('apps/btn_ajoute_com.php')?>
+		<?php
+		require('apps/btn_ajoute_com.php');
+		?>
 
 
 	</div>
 </div>
 <a href="index.phh?page=traitement_login?action=supprimer">supprimer</a>
 <!-- Affichage des commentaires liés à l'article -->
-<?php require ("apps/artComment.php"); ?>
+<?php 
+require ("apps/artComment.php"); 
+// var_dump($artId);
+
+?>
 	
 

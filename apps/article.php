@@ -14,10 +14,12 @@ if (isset($_GET['artId'])){
 	$artCreaDate = $ligne['date_creation'];
 	// $artId = $ligne['id'];
 	require('views/article.phtml');
-			
+	// var_dump($artId);
+
 }	
 else{
 	$error = "erreur interne";
 }
+// var_dump($artId);
 ?>
 
