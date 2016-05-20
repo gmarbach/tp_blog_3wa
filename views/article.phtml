@@ -5,18 +5,18 @@ Affichage de l'article-->
 		<div class="panel panel-info">
 			<div class="panel-heading">
 			<h3 class="panel-title"><?=$artTitle?>créé le <?=$artCreaDate?> par <?=$artAuthor?></h3>
-			<form action="" method="get" class="comment">
+			<!-- <form action="" method="get" class="comment">
 				<a href="?page=artCommentCrea&artId=<?=$artId?>">
 					<button type="submit" nom="bouton_creer_com">Ajouter un commentaire</button>
 				</a>
-			</form>
+			</form> -->
 			</div>
 			<div class="panel-body">
 			    <?=$artContent?>
 			</div>
 		</div>
 
-
+		<?=require('apps/btn_ajoute_com.php')?>
 
 
 	</div>
