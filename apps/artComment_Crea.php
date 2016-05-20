@@ -1,4 +1,5 @@
 <?php
+var_dump($artId);
 $query="SELECT * FROM comments WHERE id=".$artId;
 //$joint="SELECT articles.id, comments.id AS commentaire_id FROM articles INNER JOIN comments ON article.id=comments.id ORDER BY article.id;"
 $res=mysqli_query($link,$query);
