@@ -11,7 +11,9 @@ if(isset($_GET['action']))
 
     
 
+    $supr = "DELETE * FROM articles";
 
+    mysqli_query($link,$supr);
 
  
 
@@ -57,7 +59,7 @@ if(isset($_GET['action']))
 if(isset($_GET['action']))
 {
 
-    if($_GET['action'] == "commenter")
+    if($_GET['action'] == "comenter")
     
 {
 
