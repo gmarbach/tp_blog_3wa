@@ -2,22 +2,56 @@
 	$error='';
 
 
-if(isset($_POST['action']))
+if(isset($_GET['action']))
 {
-   
-    if($_POST['actiion'] == "supprimer")
+
+    if($_GET['action'] == "supprimer")
+    
+{
+
+    
 
 
-    {
 
-        $x = 1 ;
+ 
 
-        $req = "DELETE * FROM articles WHERE id=2";
+    /*mysqli_query($link,'DELETE * FROM articles');*/
 
-        $res = mysqli_query($link,$req);
-          header('Location:index.php?page=home');
+
+
+    
+
+    header('Location:index.php?page=home');
+
+ 
+}
+
+    
         
-    }
+    
+}
+
+
+if(isset($_GET['action']))
+{
+
+    if($_GET['action'] == "modifier")
+    
+{
+
+    
+
+
+    
+
+    header('Location:index.php?page=home');
+
+ 
+}
+
+    
+        
+    
 }
 
 
@@ -30,8 +64,8 @@ if(isset($_POST['action']))
 	{
 
         /** Pascal : Vous devriez aussi récupérer l'id de l'utilisateur, ça vous sera utile sous peu ! **/
-        $comparer = "SELECT login, pwd, profil FROM register";/** Pascal : Dans votre base de données vous n'avez pas respecté la taille des champs : 2^n-1 **/
-        $res = mysqli_query($link,$comparer);
+       $comparer = "SELECT login, pwd, profil FROM register";/** Pascal : Dans votre base de données vous n'avez pas respecté la taille des champs : 2^n-1 **/
+       $res = mysqli_query($link,$comparer);
 
         while($lignes = mysqli_fetch_assoc($res))
         {
