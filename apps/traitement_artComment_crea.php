@@ -30,7 +30,7 @@
 			$insert = "INSERT INTO comments (titre, contenu, id_author, id_article) VALUES ('".$title."', '".$content."', '".$resAlpha."', '".$resOne."')";
 			$res = mysqli_query($link, $insert);
 
-			header('Location: index.php?page=index');
+			header('Location: index.php?page=artComment_Crea');
 			var_dump($res);
 
 		}
