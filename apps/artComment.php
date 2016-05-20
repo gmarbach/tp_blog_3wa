@@ -1,28 +1,30 @@
 <?php
-$query="SELECT * FROM comments WHERE id=".$artId;
-//$joint="SELECT articles.id, comments.id AS commentaire_id FROM articles INNER JOIN comments ON article.id=comments.id ORDER BY article.id;"
-$res=mysqli_query($link,$query);
+// if(isset($_SESSION['id_article'])){
+	$query="SELECT * FROM comments WHERE id_article=".$artId;
+	//$joint="SELECT articles.id, comments.id AS commentaire_id FROM articles INNER JOIN comments ON article.id=comments.id ORDER BY article.id;"
+	$res=mysqli_query($link,$query);
+	while ($ligne=mysqli_fetch_assoc($res))
+	{
+		$comId = $ligne['id'];
+		$comTitle = $ligne['titre'];
+		$comContent = $ligne['contenu'];
+		$comAuthor = $ligne['auteur'];
+		$comCreaDate = $ligne['date_de_creation'];
+		$comModifDate= $ligne['date_de_modif'];
+		$artId = $ligne['id_article'];
+		// var_dump($artId);
 
-		while ($ligne=mysqli_fetch_assoc($res))
-		{
-			$comTitle = $ligne['titre'];
-			$comContent = $ligne['contenu'];
-			$comAuthor = $ligne['auteur'];
-			$comCreaDate = $ligne['date_de_creation'];
-			$comModifDate= $ligne['date_de_modif'];
-			$comId = $ligne['id_article'];
+		// if (isset($_SESSION['login']))
+		// {
+		// 	require('views/artComment_Crea.phtml');
+		// }
+		
+		// else
+		// {
+			require('views/artComment.phtml');
+		// }
+	}
 
-			if (isset($_SESSION['login']))
-			{
-				require('views/artCommentCrea.phtml');
-			}
-			
-			else
-			{
-				require('views/artComment.phtml');
-			}
-		}
-
-
+// }
 	
 // ?>

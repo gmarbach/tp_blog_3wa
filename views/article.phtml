@@ -1,5 +1,6 @@
 
 <!--Affichage de l'article-->
+
 <div class="container">
 	<div class="row">
 		<div class="panel panel-info">
@@ -16,13 +17,19 @@
 			</div>
 		</div>
 
-		<?=require('apps/btn_ajoute_com.php')?>
+		<?php
+		require('apps/btn_ajoute_com.php');
+		?>
 
 
 
 	</div>
 </div>
 <!-- Affichage des commentaires liés à l'article -->
-<?php require ("apps/artComment.php"); ?>
+<?php 
+require ("apps/artComment.php"); 
+// var_dump($artId);
+
+?>
 	
 
