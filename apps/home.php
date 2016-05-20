@@ -24,7 +24,33 @@
 		$artAuthor = $ligne['autheur'];
 		$artId = $ligne['id'];
 
-		require('views/home.phtml');
+if (isset($_SESSION['login']))
+{
+        
+	if ($_SESSION['profil'] == 'admin')
+	{
+		require('views/home_admin.phtml');
+	}
+	 	
+	else
+		require('views/home_user.phtml');
+}
+else
+{
+	require('views/home.phtml');
+}
+
+
+
+
+
+
+
+
+
+       
+
+	    
 		$count++;
 	}
 
