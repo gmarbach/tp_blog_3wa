@@ -1,5 +1,31 @@
 <?php
 	$error='';
+
+
+if(isset($_POST['action']))
+{
+   
+    if($_POST['actiion'] == "supprimer")
+
+
+    {
+
+        $x = 1 ;
+
+        $req = "DELETE * FROM articles WHERE id=2";
+
+        $res = mysqli_query($link,$req);
+          header('Location:index.php?page=home');
+        
+    }
+}
+
+
+
+
+
+
+
 	if (isset($_POST['login'], $_POST['pwd']))
 	{
 
