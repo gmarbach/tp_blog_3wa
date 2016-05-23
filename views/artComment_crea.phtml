@@ -4,7 +4,7 @@ var_dump($artId);
 <div class="container">
 	<div class="row">
 		<div class="panel panel-info">
-			<form action="" method="POST" class="comment">
+			<form action="index.php?page=artComment_crea&artId=<?=$artId?>" method="POST" class="comment">
 				<div class="comment-item">
 					<label for="title">Titre du commentaire</label>
 					<input type="text" name="title" id="title">
@@ -13,7 +13,7 @@ var_dump($artId);
 					<label for="content">Votre commentaire</label>
 					<textarea type="text" name="content" id="content"></textarea>
 				</div>	
-					<button type="submit">Créer</button>
+				<input type="submit" value="Créer">
 			</form>
 		</div>
 	</div>

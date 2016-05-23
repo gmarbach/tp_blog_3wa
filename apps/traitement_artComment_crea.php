@@ -1,16 +1,14 @@
 <?php
 	$error='';
 	
-	if (isset($_POST['title'], $_POST['content']))
+	if (isset($_POST['title'], $_POST['content'], $_GET['artId'], $_SESSION['id']))
 	{
 		$title = $_POST['title'];
 		$content = $_POST['content'];
 		
-		$idArticle= "SELECT id FROM articles";
-		$resOne = mysqli_query($link,$idArticle);
+		$idArticle= $_GET['artId'];
 
-		$idUser="SELECT id FROM register";
-		$resAlpha= mysqli_query($link,$idUser);
+		$idUser= $_SESSION['id'];
 
 
 
@@ -27,11 +25,11 @@
 		if (empty($error))
 		{
 
-			$insert = "INSERT INTO comments (titre, contenu, id_author, id_article) VALUES ('".$title."', '".$content."', '".$resAlpha."', '".$resOne."')";
+			$insert = "INSERT INTO comments (titre, contenu, id_author, id_article) VALUES ('".$title."', '".$content."', '".$idUser."', '".$idArticle."')";
 			$res = mysqli_query($link, $insert);
 
-			header('Location: index.php?page=artComment_Crea');
-			var_dump($res);
+			header('Location: index.php?page=article&artId='.$idArticle);
+			exit;
 
 		}
 		

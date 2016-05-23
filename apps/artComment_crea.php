@@ -12,12 +12,16 @@ $res=mysqli_query($link,$query);
 			$comCreaDate = $ligne['date_de_creation'];
 			$comModifDate= $ligne['date_de_modif'];
 			$comId = $ligne['id_article'];
-	
+
 			if (isset($_SESSION['login']))
 			{
+
+
+
 				require('views/artComment_crea.phtml');
 			}
 			
+
 			else
 			{
 
