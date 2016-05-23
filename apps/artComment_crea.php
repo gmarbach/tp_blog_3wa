@@ -13,14 +13,14 @@ $res=mysqli_query($link,$query);
 			$comModifDate= $ligne['date_de_modif'];
 			$comId = $ligne['id_article'];
 
-			if (isset($_SESSION['login']))
-			{
+			// if (isset($_SESSION['login']))
+			// {
 				require('views/artComment_crea.phtml');
-			}
+		// 	}
 			
-			else
-			{
-				require('views/artComment.phtml');
-			}
+		// 	else
+		// 	{
+		// 		require('views/artComment.phtml');
+		// 	}
 		}
 ?>
