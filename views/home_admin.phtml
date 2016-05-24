@@ -13,10 +13,9 @@
 			<div class="panel-body">
 			    <?=$artContent?> ....... <em>(lire la suite)</em>
 			</div>
-              
-			
-<a href="index.php?page=login&action=supprimer&id=<?php $artId ?>">supprimer</a>
-<a href="index.php?page=login&action=modifier&id=<?php $artId ?>">modiffier</a>
+              			
+			<a href="index.php?page=login&action=supprimer&id=<?php echo $artId; ?>">supprimer</a>
+			<a href="index.php?page=article_modif&action=modifier&id=<?php echo $artId; ?>">modifier</a>
 
 	</div>
 </a>
