@@ -1,7 +1,6 @@
 <?php
 	$error='';
 
-
 if(isset($_GET['action']))
 {
 
@@ -23,24 +22,12 @@ if(isset($_GET['action']))
 
     mysqli_query($link,$supr);
 
- 
-
-
-
-
-    
-
-//    header('Location:index.php?page=home_admin');
-
- 
+//    header('Location:index.php?page=home_admin'); 
+}
+   
 }
 
-    
-        
-    
-}
-
-
+/*
 if(isset($_GET['action']))
 {
 
@@ -49,11 +36,19 @@ if(isset($_GET['action']))
 {
 
     
-
+    $artId = $_GET['id'];
+    
+    $copy = "SELECT (titre, contenu, autheur, date_creation, hide_article, id_author) FROM articles WHERE id='".$artId."'";
+    $res = mysqli_query($link, $copy);
+    
+    echo "vous voulez modifier";
+    var_dump($artId);
+    var_dump($copy);
+    var_dump($res);
 
     
 
-    header('Location:index.php?page=home_admin');
+//    header('Location:index.php?page=register');
 
  
 }
@@ -90,7 +85,7 @@ if(isset($_GET['action']))
 }
 
 
-
+*/
 
 
 
