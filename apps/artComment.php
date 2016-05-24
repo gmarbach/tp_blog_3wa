@@ -12,17 +12,10 @@
 		$comCreaDate = $ligne['date_de_creation'];
 		$comModifDate= $ligne['date_de_modif'];
 		$artId = $ligne['id_article'];
-		// var_dump($artId);
+		$id_author = $ligne['id_author'];
 
-		// if (isset($_SESSION['login']))
-		// {
-		// 	require('views/artComment_Crea.phtml');
-		// }
+		require('views/artComment.phtml');
 		
-		// else
-		// {
-			require('views/artComment.phtml');
-		// }
 	}
 
 // }

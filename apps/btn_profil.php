@@ -6,8 +6,9 @@ if(isset($_SESSION['login'])){
 			require('views/btn_profil_admin.phtml');
 		}
 
-
-		require('views/btn_profil_user.phtml');
+		if($id_author == $_SESSION['id'] or $_SESSION['profil'] == 'admin'){
+			require('views/btn_profil_user.phtml');
+		}
 	}
 }
 ?>
